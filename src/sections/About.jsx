@@ -68,14 +68,10 @@ const About = () => {
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-4 mt-8">
-                            <div className="p-4 bg-gray-800 rounded-lg border border-gray-700 text-center">
-                                <span className="block text-3xl font-bold text-white">2+</span>
-                                <span className="text-sm text-gray-400">Years Experience</span>
-                            </div>
-                            <div className="p-4 bg-gray-800 rounded-lg border border-gray-700 text-center">
-                                <span className="block text-3xl font-bold text-white">10+</span>
-                                <span className="text-sm text-gray-400">Projects Completed</span>
+                        <div className="mt-8">
+                            <div className="p-6 bg-gray-800 rounded-lg border border-gray-700 text-center">
+                                <span className="block text-4xl font-bold text-white mb-2">2+</span>
+                                <span className="text-base text-gray-400">Years Experience of Coding</span>
                             </div>
                         </div>
                     </motion.div>

@@ -33,7 +33,6 @@ const Navbar = () => {
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0 cursor-pointer">
                         <Link to="home" smooth={true} duration={500} className="text-2xl font-bold text-primary">
-                            Portfolio<span className="text-white">.AI</span>
                         </Link>
                     </div>
 

@@ -47,7 +47,7 @@ const Home = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <h2 className="text-xl md:text-2xl text-primary font-semibold mb-4">
-                        Hello, I'm an
+                        Hello, I'm Rudra
                     </h2>
                     <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
                         AI & ML <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Enthusiast</span>

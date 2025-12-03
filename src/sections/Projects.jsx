@@ -1,31 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink, Folder } from 'lucide-react';
+import model1photo from '../assets/model1photo.jpg';
 
 const projectsData = [
     {
-        title: "AI Image Generator",
-        description: "A deep learning model capable of generating realistic images from text descriptions using GANs.",
-        tags: ["Python", "PyTorch", "GANs", "React"],
-        links: { github: "#", demo: "#" }
-    },
-    {
-        title: "Sentiment Analysis Tool",
-        description: "NLP-based application to analyze customer feedback and determine sentiment polarity.",
-        tags: ["Python", "NLTK", "Flask", "D3.js"],
-        links: { github: "#", demo: "#" }
-    },
-    {
-        title: "Autonomous Drone Navigation",
-        description: "Computer vision system for obstacle avoidance and path planning in drones.",
-        tags: ["C++", "OpenCV", "ROS", "YOLO"],
-        links: { github: "#", demo: "#" }
-    },
-    {
-        title: "Stock Price Predictor",
-        description: "Time-series forecasting model using LSTM networks to predict stock market trends.",
-        tags: ["Python", "TensorFlow", "Pandas", "Streamlit"],
-        links: { github: "#", demo: "#" }
+        title: "House price prediction using linear regression",
+        description: "A machine learning project that predicts house prices using linear regression.",
+        tags: ["Python", "NumPy", "Matplotlib", "Scikit-learn", "Seaborn"],
+        links: { github: "https://github.com/Rudramahale/Internship-projects/blob/main/model.ipynb", demo: "#" },
+        image: model1photo
     }
 ];
 
@@ -61,8 +45,18 @@ const Projects = () => {
                             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
 
                             <div className="h-48 bg-gray-700 flex items-center justify-center group-hover:bg-gray-600 transition-colors relative overflow-hidden">
-                                <div className="absolute inset-0 bg-primary/10 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                                <Folder className="w-16 h-16 text-gray-500 group-hover:text-primary transition-colors z-10" />
+                                {project.image ? (
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                                    />
+                                ) : (
+                                    <>
+                                        <div className="absolute inset-0 bg-primary/10 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                                        <Folder className="w-16 h-16 text-gray-500 group-hover:text-primary transition-colors z-10" />
+                                    </>
+                                )}
                             </div>
 
                             <div className="p-6">
