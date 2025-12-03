@@ -4,355 +4,323 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rudra Mahale | AI & ML Portfolio</title>
-  <meta name="description"
-    content="Portfolio of Rudra Mahale, an AI & ML enthusiast and developer specializing in Python, Deep Learning, and Web Development.">
-  <meta name="keywords"
-    content="Rudra Mahale, AI, Machine Learning, Deep Learning, Portfolio, Web Development, React, Python">
-  <meta name="author" content="Rudra Mahale">
-
-  <!-- Fonts -->
+  <title>Rudra Mahale | AI & ML Enthusiast</title>
+  <meta name="description" content="Portfolio of Rudra Mahale, an AI & ML Enthusiast and Developer.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons (using unpkg for simplicity in static site) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
   <!-- Cursor -->
-  <div class="cursor-dot"></div>
-  <div class="cursor-outline"></div>
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-outline" id="cursor-outline"></div>
 
   <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container nav-container">
-      <a href="#home" class="logo"></a>
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <div class="logo">
+          <a href="#home" class="logo-link"></a>
+        </div>
 
-      <button class="menu-toggle">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
+        <!-- Desktop Menu -->
+        <div class="desktop-menu">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
 
-      <div class="nav-links">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <!-- Mobile Menu Button -->
+        <div class="mobile-menu-btn">
+          <button id="menu-toggle">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
       </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#contact" class="mobile-link">Contact</a>
     </div>
   </nav>
 
-  <!-- Home -->
-  <section id="home" class="hero">
-    <div class="hero-bg-blob blob-1"></div>
-    <div class="hero-bg-blob blob-2"></div>
-
-    <div class="container text-center hero-content fade-in-up">
-      <h2 class="text-primary">Hello, I'm Rudra</h2>
-      <h1>AI & ML <span class="text-gradient">Enthusiast</span></h1>
-      <p>Passionate about building intelligent systems, data analysis, and turning complex problems into elegant
-        solutions.</p>
-
-      <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">
-          View Projects
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </a>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
+  <main>
+    <!-- Home Section -->
+    <section id="home">
+      <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
       </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="section">
-    <div class="container">
-      <div class="text-center section-title fade-in-up">
-        <h2>About Me</h2>
-        <div class="title-underline"></div>
-      </div>
-
-      <div class="about-content fade-in-up">
-        <div class="about-cards">
-          <div class="card-stack">
-            <div class="card-item">
-              <svg xmlns="http://www.w3.org/2000/svg" class="card-icon text-primary" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
-              <h3>Developer</h3>
-              <p>Building scalable web applications and intuitive user interfaces.</p>
-            </div>
-            <div class="card-item">
-              <svg xmlns="http://www.w3.org/2000/svg" class="card-icon text-secondary" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
-                <path d="M8.5 8.5a2.5 2.5 0 0 0-2.5 2.5"></path>
-                <path d="M15.5 15.5a2.5 2.5 0 0 0 2.5-2.5"></path>
-              </svg>
-              <h3>AI Researcher</h3>
-              <p>Exploring the frontiers of Machine Learning and Deep Learning.</p>
-            </div>
-            <div class="card-item">
-              <svg xmlns="http://www.w3.org/2000/svg" class="card-icon" style="color: #4ade80;" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-              </svg>
-              <h3>Data Analyst</h3>
-              <p>Transforming raw data into actionable insights.</p>
-            </div>
+      <div class="container home-content">
+        <div class="fade-in-up">
+          <h2 class="subtitle">Hello, I'm Rudra</h2>
+          <h1 class="title">AI & ML <span class="gradient-text">Enthusiast</span></h1>
+          <p class="description">
+            Passionate about building intelligent systems, data analysis, and turning complex problems into elegant
+            solutions.
+          </p>
+          <div class="cta-buttons">
+            <a href="#projects" class="btn btn-primary">
+              View Projects <i data-lucide="arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              Contact Me
+            </a>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="about-text">
-          <h3 class="text-primary" style="font-size: 2rem; margin-bottom: 1.5rem;">Who I Am</h3>
-          <p>I am a passionate AI & ML enthusiast with a strong foundation in computer science. My journey began with a
-            curiosity about how machines learn, which led me to dive deep into neural networks, natural language
-            processing, and computer vision.</p>
-          <p>I love bridging the gap between theoretical AI concepts and real-world applications. Whether it's building
-            a recommendation system, deploying a model to the cloud, or creating a stunning frontend to showcase it, I
-            enjoy every step of the process.</p>
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h2>About Me</h2>
+          <div class="divider"></div>
+        </div>
 
-          <div class="education-box">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="text-primary">
-              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-            </svg>
-            <div>
-              <h4 style="color: white; font-weight: 600;">Education</h4>
-              <p style="color: #cbd5e1; font-size: 0.9rem;">Pursuing Diploma at K.K.Wagh Polytechnic, Nashik</p>
+        <div class="about-grid">
+          <!-- Left Column -->
+          <div class="about-visual fade-in-left">
+            <div class="card-stack">
+              <div class="card">
+                <i data-lucide="code" class="icon-primary"></i>
+                <h3>Developer</h3>
+                <p>Building scalable web applications and intuitive user interfaces.</p>
+              </div>
+              <div class="card">
+                <i data-lucide="brain" class="icon-secondary"></i>
+                <h3>AI Researcher</h3>
+                <p>Exploring the frontiers of Machine Learning and Deep Learning.</p>
+              </div>
+              <div class="card">
+                <i data-lucide="database" class="icon-green"></i>
+                <h3>Data Analyst</h3>
+                <p>Transforming raw data into actionable insights.</p>
+              </div>
             </div>
           </div>
 
-          <div class="experience-box">
-            <span class="exp-number">2+</span>
-            <span style="color: #94a3b8;">Years Experience of Coding</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+          <!-- Right Column -->
+          <div class="about-text fade-in-right">
+            <h3 class="text-primary">Who I Am</h3>
+            <p>
+              I am a passionate AI & ML enthusiast with a strong foundation in computer science. My journey began with a
+              curiosity about how machines learn, which led me to dive deep into neural networks, natural language
+              processing, and computer vision.
+            </p>
+            <p>
+              I love bridging the gap between theoretical AI concepts and real-world applications. Whether it's building
+              a recommendation system, deploying a model to the cloud, or creating a stunning frontend to showcase it, I
+              enjoy every step of the process.
+            </p>
 
-  <!-- Skills -->
-  <section id="skills" class="section bg-darker">
-    <div class="container">
-      <div class="text-center section-title fade-in-up">
-        <h2>Technical Skills</h2>
-        <div class="title-underline"></div>
-      </div>
-
-      <div class="skills-grid fade-in-up">
-        <!-- Languages -->
-        <div class="skill-card">
-          <h3 class="skill-category">Languages</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">C++</span>
-            <span class="skill-tag">SQL</span>
-          </div>
-        </div>
-
-        <!-- AI & ML -->
-        <div class="skill-card">
-          <h3 class="skill-category">AI & ML</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">TensorFlow</span>
-            <span class="skill-tag">PyTorch</span>
-            <span class="skill-tag">Scikit-learn</span>
-            <span class="skill-tag">OpenCV</span>
-            <span class="skill-tag">Pandas</span>
-            <span class="skill-tag">NumPy</span>
-          </div>
-        </div>
-
-        <!-- API -->
-        <div class="skill-card">
-          <h3 class="skill-category">API Development</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">FastAPI</span>
-          </div>
-        </div>
-
-        <!-- Tools -->
-        <div class="skill-card">
-          <h3 class="skill-category">Tools & Platforms</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">Jupyter</span>
-            <span class="skill-tag">VS Code</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="section">
-    <div class="container">
-      <div class="text-center section-title fade-in-up">
-        <h2>Featured Projects</h2>
-        <div class="title-underline"></div>
-      </div>
-
-      <div class="projects-grid fade-in-up">
-        <div class="project-card">
-          <div class="project-image">
-            <img src="assets/model1photo.jpg" alt="House price prediction using linear regression">
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">House price prediction using linear regression</h3>
-            <p class="project-desc">A machine learning project that predicts house prices using linear regression.</p>
-
-            <div class="project-tags">
-              <span class="project-tag">Python</span>
-              <span class="project-tag">NumPy</span>
-              <span class="project-tag">Matplotlib</span>
-              <span class="project-tag">Scikit-learn</span>
-              <span class="project-tag">Seaborn</span>
+            <div class="education-box">
+              <i data-lucide="graduation-cap" class="icon-primary"></i>
+              <div>
+                <h4>Education</h4>
+                <p>Pursuing Diploma at K.K.Wagh Polytechnic, Nashik</p>
+              </div>
             </div>
 
-            <div class="project-links">
-              <a href="https://github.com/Rudramahale/Internship-projects/blob/main/model.ipynb" target="_blank"
-                class="project-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path
-                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                  </path>
-                </svg>
-                Code
+            <div class="experience-box">
+              <span class="exp-number">2+</span>
+              <span class="exp-text">Years Experience of Coding</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h2>Technical Skills</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Languages -->
+          <div class="skill-card fade-in-up" style="animation-delay: 0.1s;">
+            <h3>Languages</h3>
+            <div class="tags">
+              <span>Python</span>
+              <span>JavaScript</span>
+              <span>C++</span>
+              <span>SQL</span>
+            </div>
+          </div>
+          <!-- AI & ML -->
+          <div class="skill-card fade-in-up" style="animation-delay: 0.2s;">
+            <h3>AI & ML</h3>
+            <div class="tags">
+              <span>TensorFlow</span>
+              <span>PyTorch</span>
+              <span>Scikit-learn</span>
+              <span>OpenCV</span>
+              <span>Pandas</span>
+              <span>NumPy</span>
+            </div>
+          </div>
+          <!-- API Development -->
+          <div class="skill-card fade-in-up" style="animation-delay: 0.3s;">
+            <h3>API Development</h3>
+            <div class="tags">
+              <span>FastAPI</span>
+            </div>
+          </div>
+          <!-- Tools & Platforms -->
+          <div class="skill-card fade-in-up" style="animation-delay: 0.4s;">
+            <h3>Tools & Platforms</h3>
+            <div class="tags">
+              <span>Git</span>
+              <span>Jupyter</span>
+              <span>VS Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h2>Featured Projects</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card fade-in-up">
+            <div class="project-image">
+              <!-- Using the preserved asset -->
+              <img src="assets/model1photo.jpg" alt="House price prediction"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+              <div class="fallback-icon" style="display: none;">
+                <i data-lucide="folder"></i>
+              </div>
+              <div class="overlay"></div>
+            </div>
+            <div class="project-content">
+              <h3>House price prediction using linear regression</h3>
+              <p>A machine learning project that predicts house prices using linear regression.</p>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>NumPy</span>
+                <span>Matplotlib</span>
+                <span>Scikit-learn</span>
+                <span>Seaborn</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Rudramahale/Internship-projects/blob/main/model.ipynb" target="_blank">
+                  <i data-lucide="github"></i> Code
+                </a>
+                <a href="#" class="disabled-link">
+                  <i data-lucide="external-link"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <h2>Get In Touch</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="contact-container">
+          <!-- Contact Info -->
+          <div class="contact-info fade-in-left">
+            <h3>Let's Connect</h3>
+            <p>I'm currently open to new opportunities and collaborations. Whether you have a question or just want to
+              say hi, feel free to reach out!</p>
+
+            <div class="contact-item">
+              <div class="icon-circle">
+                <i data-lucide="mail"></i>
+              </div>
+              <a href="mailto:rudramahale1@gmail.com">rudramahale1@gmail.com</a>
+            </div>
+
+            <div class="contact-item">
+              <div class="icon-circle">
+                <i data-lucide="phone"></i>
+              </div>
+              <a href="tel:+917620278897">+91 76202 78897</a>
+            </div>
+
+            <div class="social-links">
+              <a href="https://github.com/Rudramahale" target="_blank" class="social-btn">
+                <i data-lucide="github"></i>
               </a>
-              <a href="#" class="project-link demo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-                Live Demo
+              <a href="https://www.linkedin.com/in/rudra-mahale-7a5782344/" target="_blank" class="social-btn">
+                <i data-lucide="linkedin"></i>
+              </a>
+              <a href="#" class="social-btn">
+                <i data-lucide="twitter"></i>
               </a>
             </div>
           </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper fade-in-right">
+            <form class="contact-form" onsubmit="event.preventDefault();">
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" placeholder="john@example.com">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" placeholder="Project Inquiry">
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" placeholder="Your message here..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-submit">
+                Send Message <i data-lucide="send"></i>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Contact -->
-  <section id="contact" class="section bg-darker">
+  <footer>
     <div class="container">
-      <div class="text-center section-title fade-in-up">
-        <h2>Get In Touch</h2>
-        <div class="title-underline"></div>
-      </div>
-
-      <div class="contact-container fade-in-up">
-        <div class="contact-info">
-          <h3>Let's Connect</h3>
-          <p style="color: #94a3b8; margin-bottom: 2rem;">I'm currently open to new opportunities and collaborations.
-            Whether you have a question or just want to say hi, feel free to reach out!</p>
-
-          <div class="contact-item">
-            <div class="icon-box">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-            </div>
-            <a href="mailto:rudramahale1@gmail.com">rudramahale1@gmail.com</a>
-          </div>
-
-          <div class="contact-item">
-            <div class="icon-box">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path
-                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                </path>
-              </svg>
-            </div>
-            <a href="tel:+917620278897">+91 76202 78897</a>
-          </div>
-
-          <div class="social-links">
-            <a href="https://github.com/Rudramahale" target="_blank" class="social-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                </path>
-              </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/rudra-mahale-7a5782344/" target="_blank" class="social-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-              </svg>
-            </a>
-            <a href="#" class="social-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path
-                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
-                </path>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <form class="contact-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label">Name</label>
-              <input type="text" class="form-input" placeholder="John Doe">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Email</label>
-              <input type="email" class="form-input" placeholder="john@example.com">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Subject</label>
-            <input type="text" class="form-input" placeholder="Project Inquiry">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Message</label>
-            <textarea class="form-textarea" rows="4" placeholder="Your message here..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
-            Send Message
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="22" y1="2" x2="11" y2="13"></line>
-              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-            </svg>
-          </button>
-        </form>
-      </div>
+      <p>&copy; 2024 Rudra Mahale. All rights reserved.</p>
     </div>
-  </section>
+  </footer>
 
-  <!-- Scripts -->
   <script src="script.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 
 </html>
