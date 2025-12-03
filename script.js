@@ -101,4 +101,47 @@ document.addEventListener('DOMContentLoaded', () => {
             cursorOutline.style.backgroundColor = 'transparent';
         });
     });
+
+    // --- EmailJS Contact Form ---
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = 'Sending...';
+            submitBtn.disabled = true;
+
+            // Collect form data
+            const formData = new FormData(this);
+            const templateParams = {
+                // Map form fields to template variables
+                name: formData.get('from_name'),
+                email: formData.get('from_email'),
+                subject: formData.get('subject'),
+                message: formData.get('message'),
+                // Extra fields just in case
+                from_name: formData.get('from_name'),
+                from_email: formData.get('from_email'),
+                reply_to: formData.get('from_email')
+            };
+
+            emailjs.send('service_h6xfq5o', 'template_ne447qn', templateParams)
+                .then(function () {
+                    console.log('SUCCESS!');
+                    alert('Email sent successfully!');
+                    contactForm.reset();
+                }, function (error) {
+                    console.log('FAILED...', error);
+                    alert('Failed to send email: ' + JSON.stringify(error));
+                })
+                .finally(function () {
+                    // Restore button state
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                });
+        });
+    }
 });
