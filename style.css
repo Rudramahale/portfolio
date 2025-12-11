@@ -552,7 +552,10 @@ section {
     border: 1px solid #334155;
     transition: all 0.3s;
     position: relative;
-    group-hover: border-color: var(--color-primary);
+    /* Symmetry changes */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .project-card:hover {
@@ -569,6 +572,8 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
+    /* Prevent image from shrinking */
 }
 
 .project-image img {
@@ -592,6 +597,10 @@ section {
 
 .project-content {
     padding: 1.5rem;
+    /* Symmetry changes */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .project-content h3 {
@@ -634,6 +643,8 @@ section {
 .project-links {
     display: flex;
     gap: 1rem;
+    /* Symmetry changes */
+    margin-top: auto;
 }
 
 .project-links a {
