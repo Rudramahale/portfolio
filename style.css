@@ -674,6 +674,14 @@ section {
     text-decoration: underline;
 }
 
+.subsection-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--color-light);
+    margin: 2rem 0;
+    text-align: center;
+}
+
 /* Contact Section */
 .contact-container {
     display: flex;
